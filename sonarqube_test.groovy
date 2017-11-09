@@ -1,11 +1,11 @@
 import groovy.json.JsonSlurper
 
 /*
-http://derigb0vc1.ad001.siemens.net:9000/api/measures/component?componentKey=edge.platform.linux.exenia.appmngr&metricKeys=coverage,ncloc
-http://derigb0vc1.ad001.siemens.net:9000/api/measures/component_tree?baseComponentKey=edge.platform.linux.exenia.appmngr&depth=-1&qualifiers=FIL&metricKeys=coverage
+http://localhost:9000/api/measures/component?componentKey=edge.platform.linux.exenia.appmngr&metricKeys=coverage,ncloc
+http://localhost:9000/api/measures/component_tree?baseComponentKey=edge.platform.linux.exenia.appmngr&depth=-1&qualifiers=FIL&metricKeys=coverage
 */
-def sonarqube_host="http://derigb0vc1.ad001.siemens.net:9000"
-def project_name="edge.platform.linux.exenia.appmngr"
+def sonarqube_host="http://localhost:9000"
+def project_name="test"
 
 def SONARCUBE_URL = "${sonarqube_host}/api/measures/component?componentKey=${project_name}"
 def COVERAGE_URL = "${sonarqube_host}/api/measures/component_tree?baseComponentKey=${project_name}&depth=-1&qualifiers=FIL&metricKeys=coverage"
